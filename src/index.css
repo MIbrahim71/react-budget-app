@@ -1,7 +1,6 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
   background-color: white;
 }
 
@@ -17,11 +16,38 @@
   color: black;
 }
 
+.header-btns button:first-child {
+  background-color: dodgerblue;
+  color: white;
+}
+
 .header-btns button:hover {
   background-color: dodgerblue;
   color: white;
   cursor: pointer;
 }
+
+/* Budget Card */
+
+.budget-container {
+  display: grid;
+  grid-template-columns: repeat(300px, 1fr);
+  gap: 1rem;
+  align-items: flex-start;
+  border: 1px solid red;
+}
+
+.budget-card {
+  color: black;
+  border: 1px solid grey;
+}
+
+.budget-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.budget-header
 
 /* ////////////// */
 /* MEDIA QUERIES */
