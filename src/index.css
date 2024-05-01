@@ -12,7 +12,8 @@
 }
 
 .header h1 {
-  font-weight: 400;
+  font-weight: 500;
+  letter-spacing: 1px;
   color: black;
 }
 
@@ -28,18 +29,22 @@
 }
 
 /* Budget Card */
-
+/* 
 .budget-container {
   display: grid;
   grid-template-columns: repeat(300px, 1fr);
   gap: 1rem;
+  margin: 0rem 1rem;
   align-items: flex-start;
   border: 1px solid red;
-}
+} */
 
 .budget-card {
   color: black;
-  border: 1px solid grey;
+  border: 1px solid lightgray;
+  margin: 0 1rem;
+  padding: 1rem 1rem;
+  border-radius: 0.3rem;
 }
 
 .budget-header {
@@ -47,7 +52,30 @@
   justify-content: space-between;
 }
 
-.budget-header
+.budget-header span {
+  color: grey;
+}
+
+.budget-card--btns {
+  text-align: right;
+  margin-top: 1rem;
+}
+
+.budget-card button:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 5px;
+  cursor: pointer;
+}
+.budget-card button:first-child {
+  color: dodgerblue;
+  background-color: white;
+  border: 1px solid dodgerblue;
+}
+
+.budget-card button {
+  color: lightgray;
+  background-color: white;
+  border: 1px solid lightgray;
+}
 
 /* ////////////// */
 /* MEDIA QUERIES */
@@ -71,5 +99,29 @@
     margin-right: 0.5rem;
     border-radius: 0.2rem;
     border: 1px solid dodgerblue;
+  }
+
+  .budget-header h1 {
+    font-size: 1.1rem;
+    font-weight: 400;
+  }
+
+  .budget-card button:first-child {
+    color: dodgerblue;
+    background-color: white;
+    font-size: 0.8rem;
+    padding: 0.4rem 0.4rem;
+    margin-right: 0.5rem;
+    border-radius: 0.2rem;
+    border: 1px solid dodgerblue;
+  }
+
+  .budget-card button {
+    color: grey;
+    background-color: white;
+    font-size: 0.8rem;
+    padding: 0.4rem 0.4rem;
+    border-radius: 0.2rem;
+    border: 1px solid grey;
   }
 }
