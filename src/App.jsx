@@ -6,8 +6,8 @@ function App() {
     <>
       <Header />
       <div className="budget-container">
-        <BudgetCard name="Entertainment" />
-        <BudgetCard name="Rent" />
+        <BudgetCard name="Entertainment" amount={0} max={1000} />
+        <BudgetCard name="Rent" amount={0} max={1000} />
       </div>
     </>
   );

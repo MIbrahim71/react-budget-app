@@ -11,9 +11,9 @@
 }
 
 .header h1 {
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 1px;
-  color: black;
+  color: rgba(0, 0, 0, 0.761);
 }
 
 .header-btns button:first-child {
@@ -49,6 +49,7 @@ button:hover {
 .budget-header {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 }
 
 .budget-header h1 {
@@ -57,13 +58,20 @@ button:hover {
 
 .budget-header span {
   color: grey;
+  font-size: 1rem;
 }
 
-.budget-left {
+.progress-bar {
   width: auto;
   height: 1rem;
   background-color: lightgray;
   border-radius: 0.8rem;
+  overflow: hidden;
+}
+
+.budget-spent {
+  height: 1rem;
+  transition: width 0.3s ease-in-out;
 }
 
 .budget-card--btns {
