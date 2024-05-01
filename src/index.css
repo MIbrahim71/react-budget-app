@@ -61,6 +61,13 @@
   color: grey;
 }
 
+.budget-left {
+  width: auto;
+  height: 1rem;
+  background-color: lightgray;
+  border-radius: 0.8rem;
+}
+
 .budget-card--btns {
   text-align: right;
   margin-top: 1rem;
