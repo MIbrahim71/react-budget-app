@@ -8,7 +8,6 @@
   display: flex;
   justify-content: space-between;
   margin: 2rem 1rem;
-  border: 2px solid red;
 }
 
 .header h1 {
@@ -22,9 +21,8 @@
   color: white;
 }
 
-.header-btns button:hover {
-  background-color: dodgerblue;
-  color: white;
+button:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 2px 5px;
   cursor: pointer;
 }
 
@@ -73,10 +71,6 @@
   margin-top: 1rem;
 }
 
-.budget-card button:hover {
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 5px;
-  cursor: pointer;
-}
 .budget-card button:first-child {
   color: dodgerblue;
   background-color: white;
@@ -94,7 +88,7 @@
 
 @media only screen and (max-width: 736px) {
   .header h1 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-right: 1rem;
   }
 
