@@ -1,15 +1,26 @@
 import AddBudgetModal from "./components/AddBudgetModal";
 import BudgetCard from "./components/BudgetCard";
 import Header from "./components/Header";
+import { useState } from "react";
 
 function App() {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setModalOpen(false);
+  };
+
   return (
     <>
-      <Header />
+      <Header onOpenModal={handleOpenModal} />
       <div className="budget-container">
         <BudgetCard name="Entertainment" amount={0} max={1000} />
         <BudgetCard name="Rent" amount={0} max={1000} />
-        <AddBudgetModal />
+        <AddBudgetModal isOpen={modalOpen} onClose={handleCloseModal} />
       </div>
     </>
   );
