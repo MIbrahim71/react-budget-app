@@ -18,8 +18,8 @@ function App() {
     <>
       <Header onOpenModal={handleOpenModal} />
       <div className="budget-container">
-        <BudgetCard name="Entertainment" amount={0} max={1000} />
-        <BudgetCard name="Rent" amount={0} max={1000} />
+        <BudgetCard name="Entertainment" amount={300} max={1000} />
+        <BudgetCard name="Rent" amount={900} max={1000} />
         <AddBudgetModal isOpen={modalOpen} onClose={handleCloseModal} />
       </div>
     </>
