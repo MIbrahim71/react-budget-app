@@ -7,7 +7,15 @@ import AddExpenseModal from "./components/AddExpenseModal";
 
 function App() {
   const [modalOpen, setModalOpen] = useState(false);
+  const [showAddExpenseModal, setShowAddExpenseModal] = useState(false);
+  const [addExpenseModalBudgetId, setAddExpenseModalBudgetId] = useState();
+
   const { budgets, getBudgetExpenses } = useBudgets();
+
+  function openAddExpenseModal(budgetId) {
+    setShowAddExpenseModal(true);
+    setAddExpenseModalBudgetId(budgetId);
+  }
 
   const handleOpenModal = () => {
     setModalOpen(true);
@@ -19,7 +27,7 @@ function App() {
 
   return (
     <>
-      <Header onOpenModal={handleOpenModal} />
+      <Header onOpenModal={handleOpenModal} onClick={openAddExpenseModal} />
       <div className="budget-container">
         {budgets.map((budget) => {
           // Get all expenses, add them all together and assign to amount variable
@@ -33,6 +41,7 @@ function App() {
               name={budget.name}
               amount={amount}
               max={budget.max}
+              onAddExpenseClick={() => openAddExpenseModal(budget.id)}
             />
           );
         })}
