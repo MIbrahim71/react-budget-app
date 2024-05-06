@@ -3,6 +3,7 @@ import BudgetCard from "./components/BudgetCard";
 import Header from "./components/Header";
 import { useState } from "react";
 import { BudgetsProvider, useBudgets } from "./contexts/BudgetsContext";
+import AddExpenseModal from "./components/AddExpenseModal";
 
 function App() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -36,6 +37,7 @@ function App() {
           );
         })}
         <AddBudgetModal isOpen={modalOpen} onClose={handleCloseModal} />
+        <AddExpenseModal isOpen={modalOpen} onClose={handleCloseModal} />
       </div>
     </>
   );
