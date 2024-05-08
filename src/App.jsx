@@ -6,28 +6,35 @@ import { BudgetsProvider, useBudgets } from "./contexts/BudgetsContext";
 import AddExpenseModal from "./components/AddExpenseModal";
 
 function App() {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [showAddExpenseModal, setShowAddExpenseModal] = useState(false);
+  const [isBudgetModalOpen, setIsBudgetModalOpen] = useState(false);
+  const [isExpenseModalOpen, setIsExpenseModalOpen] = useState(false);
   const [addExpenseModalBudgetId, setAddExpenseModalBudgetId] = useState();
 
   const { budgets, getBudgetExpenses } = useBudgets();
 
-  function openAddExpenseModal(budgetId) {
-    setShowAddExpenseModal(true);
+  const handleOpenExpenseModal = (budgetId) => {
+    setIsExpenseModalOpen(true);
     setAddExpenseModalBudgetId(budgetId);
-  }
-
-  const handleOpenModal = () => {
-    setModalOpen(true);
   };
 
-  const handleCloseModal = () => {
-    setModalOpen(false);
+  const handleCloseExpenseModal = () => {
+    setIsExpenseModalOpen(false);
+  };
+
+  const handleOpenBudgetModal = () => {
+    setIsBudgetModalOpen(true);
+  };
+
+  const handleCloseBudgetModal = () => {
+    setIsBudgetModalOpen(false);
   };
 
   return (
     <>
-      <Header onOpenModal={handleOpenModal} onClick={openAddExpenseModal} />
+      <Header
+        onOpenExpenseModal={handleOpenExpenseModal}
+        onOpenBudgetModal={handleOpenBudgetModal}
+      />
       <div className="budget-container">
         {budgets.map((budget) => {
           // Get all expenses, add them all together and assign to amount variable
@@ -45,8 +52,12 @@ function App() {
             />
           );
         })}
-        <AddBudgetModal isOpen={modalOpen} onClose={handleCloseModal} />
-        <AddExpenseModal isOpen={modalOpen} onClose={handleCloseModal} />
+        {isBudgetModalOpen && (
+          <AddBudgetModal onClose={handleCloseBudgetModal} />
+        )}
+        {isExpenseModalOpen && (
+          <AddExpenseModal onClose={handleCloseExpenseModal} />
+        )}
       </div>
     </>
   );
