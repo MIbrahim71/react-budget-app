@@ -4,6 +4,8 @@ import Header from "./components/Header";
 import { useState } from "react";
 import { useBudgets } from "./contexts/BudgetsContext";
 import AddExpenseModal from "./components/AddExpenseModal";
+import UncategorisedExpenses from "./components/UncategorisedExpenses";
+import TotalBudgetCard from "./components/TotalBudgetCard";
 
 function App() {
   const [isBudgetModalOpen, setIsBudgetModalOpen] = useState(false);
@@ -52,6 +54,8 @@ function App() {
             />
           );
         })}
+        <UncategorisedExpenses name="Uncategorised" />
+        <TotalBudgetCard />
         {isBudgetModalOpen && (
           <AddBudgetModal onClose={handleCloseBudgetModal} />
         )}
