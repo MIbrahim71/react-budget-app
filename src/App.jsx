@@ -39,6 +39,7 @@ function App() {
         onOpenExpenseModal={handleOpenExpenseModal}
         onOpenBudgetModal={handleOpenBudgetModal}
       />
+      {budgets.length === 0 && <div className="nobudget-msg"> No Budgets</div>}
       <div className="budget-container">
         {budgets.map((budget) => {
           // Get all expenses, add them all together and assign to amount variable

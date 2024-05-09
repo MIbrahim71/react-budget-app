@@ -292,4 +292,13 @@ button:hover {
     padding: 0px 10px;
     margin-left: 0.5rem;
   }
+
+  .nobudget-msg {
+    height: 60vh;
+    color: lightgray;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
