@@ -2,7 +2,7 @@ import AddBudgetModal from "./components/AddBudgetModal";
 import BudgetCard from "./components/BudgetCard";
 import Header from "./components/Header";
 import { useState } from "react";
-import { BudgetsProvider, useBudgets } from "./contexts/BudgetsContext";
+import { useBudgets } from "./contexts/BudgetsContext";
 import AddExpenseModal from "./components/AddExpenseModal";
 
 function App() {
@@ -56,7 +56,10 @@ function App() {
           <AddBudgetModal onClose={handleCloseBudgetModal} />
         )}
         {isExpenseModalOpen && (
-          <AddExpenseModal onClose={handleCloseExpenseModal} />
+          <AddExpenseModal
+            defaultBudgetId={addExpenseModalBudgetId}
+            onClose={handleCloseExpenseModal}
+          />
         )}
       </div>
     </>
