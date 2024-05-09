@@ -269,4 +269,27 @@ button:hover {
   .total-budgetcard {
     background-color: black;
   }
+
+  .view-expense {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid lightgray;
+  }
+
+  .view-expense h1 {
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
+
+  .view-expense--amount {
+    display: flex;
+  }
+
+  .view-expense--close {
+    background-color: white;
+    color: red;
+    font-size: 1rem;
+    padding: 0px 10px;
+    margin-left: 0.5rem;
+  }
 }

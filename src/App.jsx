@@ -2,15 +2,17 @@ import AddBudgetModal from "./components/AddBudgetModal";
 import BudgetCard from "./components/BudgetCard";
 import Header from "./components/Header";
 import { useState } from "react";
-import { useBudgets } from "./contexts/BudgetsContext";
+import { UNCATEGORIZED_BUDGET_ID, useBudgets } from "./contexts/BudgetsContext";
 import AddExpenseModal from "./components/AddExpenseModal";
 import UncategorisedExpenses from "./components/UncategorisedExpenses";
 import TotalBudgetCard from "./components/TotalBudgetCard";
+import ViewExpensesModal from "./components/ViewExpensesModal";
 
 function App() {
   const [isBudgetModalOpen, setIsBudgetModalOpen] = useState(false);
   const [isExpenseModalOpen, setIsExpenseModalOpen] = useState(false);
   const [addExpenseModalBudgetId, setAddExpenseModalBudgetId] = useState();
+  const [viewExpensesModalBudgetId, setViewExpensesModalBudgetId] = useState();
 
   const { budgets, getBudgetExpenses } = useBudgets();
 
@@ -51,10 +53,16 @@ function App() {
               amount={amount}
               max={budget.max}
               onAddExpenseClick={() => handleOpenExpenseModal(budget.id)}
+              onViewExpenseClick={() => setViewExpensesModalBudgetId(budget.id)}
             />
           );
         })}
-        <UncategorisedExpenses name="Uncategorised" />
+        <UncategorisedExpenses
+          name="Uncategorised"
+          onViewExpenseClick={() =>
+            setViewExpensesModalBudgetId(UNCATEGORIZED_BUDGET_ID)
+          }
+        />
         <TotalBudgetCard />
         {isBudgetModalOpen && (
           <AddBudgetModal onClose={handleCloseBudgetModal} />
@@ -63,6 +71,12 @@ function App() {
           <AddExpenseModal
             defaultBudgetId={addExpenseModalBudgetId}
             onClose={handleCloseExpenseModal}
+          />
+        )}
+        {viewExpensesModalBudgetId && (
+          <ViewExpensesModal
+            budgetId={viewExpensesModalBudgetId}
+            handleClose={() => setViewExpensesModalBudgetId()}
           />
         )}
       </div>
