@@ -250,6 +250,14 @@ button:hover {
     margin-top: 0.3rem;
   }
 
+  .modal-input select {
+    color: black;
+    background-color: white;
+    font-size: 1rem;
+    border: 1px solid lightgray;
+    border-radius: 0.2rem;
+  }
+
   .modal-addbtn {
     font-size: 1rem;
     background-color: dodgerblue;

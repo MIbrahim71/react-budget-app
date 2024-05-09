@@ -48,7 +48,7 @@ function App() {
               name={budget.name}
               amount={amount}
               max={budget.max}
-              onAddExpenseClick={() => openAddExpenseModal(budget.id)}
+              onAddExpenseClick={() => handleOpenExpenseModal(budget.id)}
             />
           );
         })}
