@@ -53,6 +53,10 @@ button:hover {
   border: 1px solid red;
 } */
 
+.budget-card.total {
+  margin-top: 3rem;
+}
+
 .budget-card {
   color: black;
   border: 1px solid lightgray;
@@ -87,18 +91,19 @@ button:hover {
 }
 
 .budget-header h1 {
+  font-weight: 400;
   margin-top: 0;
 }
 
 .budget-header span {
   color: grey;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .progress-bar {
   width: auto;
   height: 1rem;
-  background-color: lightgray;
+  background-color: rgb(234, 234, 234);
   border-radius: 0.8rem;
   overflow: hidden;
 }
@@ -140,7 +145,7 @@ button:hover {
 }
 
 .modal {
-  width: 70%;
+  width: 60%;
   background-color: white;
   padding: 2rem;
   border-radius: 5px;
@@ -166,6 +171,7 @@ button:hover {
   color: red;
   background-color: white;
   border: none;
+  border-radius: 0.2rem;
   cursor: pointer;
 }
 
@@ -187,7 +193,7 @@ button:hover {
 .modal-input h2 {
   font-size: 1.4rem;
   font-weight: 300;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
 }
 
 .modal-footer {
@@ -211,6 +217,44 @@ button:hover {
   font-size: 1rem;
   border: 1px solid lightgray;
   border-radius: 0.2rem;
+}
+
+/* View Expenses */
+
+.view-expense {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid lightgray;
+  border-radius: 0.4rem;
+  margin: 0 2rem;
+}
+
+.view-expense h1 {
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-left: 1rem;
+}
+
+.view-expense--amount {
+  display: flex;
+}
+
+.view-expense--close {
+  background-color: white;
+  color: red;
+  font-size: 1.2rem;
+  padding: 0px 10px;
+  border: none;
+  margin-left: 1rem;
+}
+
+.nobudget-msg {
+  height: 60vh;
+  color: lightgray;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ////////////// */
@@ -326,10 +370,6 @@ button:hover {
     border: 0;
     border-radius: 0.3rem;
     padding: 8px 10px;
-  }
-
-  .total-budgetcard {
-    background-color: black;
   }
 
   .view-expense {
