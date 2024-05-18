@@ -7,7 +7,7 @@
 .header {
   display: flex;
   justify-content: space-between;
-  margin: 2rem 4rem;
+  margin: 2rem 6rem;
 }
 
 .header h1 {
@@ -56,7 +56,7 @@ button:hover {
 .budget-card {
   color: black;
   border: 1px solid lightgray;
-  margin: 0 4rem;
+  margin: 0 6rem;
   margin-bottom: 1rem;
   padding: 1rem 2rem;
   border-radius: 0.3rem;
@@ -140,22 +140,18 @@ button:hover {
 }
 
 .modal {
+  width: 70%;
   background-color: white;
-  padding: 20px;
+  padding: 2rem;
   border-radius: 5px;
   color: black;
-}
-
-.close-button {
-  color: red;
-  background-color: white;
-  border: none;
-  cursor: pointer;
 }
 
 .modal-header {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
+  padding: 0 2rem;
 }
 
 .modal-header h1 {
@@ -165,23 +161,55 @@ button:hover {
   color: black;
 }
 
+.close-button {
+  font-size: 2rem;
+  color: red;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-input {
+  padding: 0 2rem;
+}
+
 .modal-input input {
+  font-size: 1rem;
+  width: 100%;
   background-color: white;
   color: black;
+  padding: 0.5rem 0;
+  margin-bottom: 0.8rem;
   border: 1px solid lightgray;
   border-radius: 0.2rem;
 }
 
 .modal-input h2 {
-  margin: 0 1rem;
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
 }
 
 .modal-footer {
+  padding: 0 2rem;
   text-align: right;
+  margin-top: 1rem;
 }
 
 .modal-addbtn {
+  font-size: 1.2rem;
+  color: white;
   background-color: dodgerblue;
+  border: 0;
+  border-radius: 0.3rem;
+  padding: 0.5rem 1rem;
+}
+
+.modal-input select {
+  color: black;
+  background-color: white;
+  font-size: 1rem;
+  border: 1px solid lightgray;
   border-radius: 0.2rem;
 }
 
