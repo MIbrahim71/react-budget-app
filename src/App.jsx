@@ -81,7 +81,6 @@ function App() {
           />
         )}
       </div>
-      <div className="initials">M I</div>
     </>
   );
 }
