@@ -66,16 +66,6 @@ button:hover {
   border-radius: 0.3rem;
 }
 
-.budget-card button:first-child {
-  color: dodgerblue;
-  background-color: white;
-  font-size: 0.8rem;
-  padding: 0.4rem 0.4rem;
-  margin-right: 0.5rem;
-  border-radius: 0.2rem;
-  border: 1px solid dodgerblue;
-}
-
 .budget-card button {
   color: grey;
   background-color: white;
@@ -83,6 +73,12 @@ button:hover {
   padding: 0.4rem 0.4rem;
   border-radius: 0.2rem;
   border: 1px solid grey;
+}
+
+.budget-card button:first-child {
+  color: dodgerblue;
+  margin-right: 0.5rem;
+  border: 1px solid dodgerblue;
 }
 .budget-header {
   display: flex;
@@ -221,12 +217,34 @@ button:hover {
 
 /* View Expenses */
 
+.view-expense--container {
+  padding: 0 2rem;
+}
+
+.view-expense--header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.view-expense--header h1 {
+  font-size: 1.5rem;
+}
+
+.view-expense--delete {
+  color: red;
+  background-color: white;
+  font-size: 1rem;
+  border-radius: 0.2rem;
+  padding: 0rem 1rem;
+  margin-right: 1rem;
+  border: 1px solid red;
+}
+
 .view-expense {
   display: flex;
   justify-content: space-between;
   border: 1px solid lightgray;
   border-radius: 0.4rem;
-  margin: 0 2rem;
 }
 
 .view-expense h1 {
@@ -263,6 +281,12 @@ button:hover {
 /* MEDIA QUERIES */
 
 @media only screen and (max-width: 736px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 2rem;
+  }
+
   .header h1 {
     font-size: 1.6rem;
     margin-right: 1rem;
@@ -283,6 +307,10 @@ button:hover {
     border: 1px solid dodgerblue;
   }
 
+  .budget-card {
+    margin: 1.2rem;
+  }
+
   .budget-header h1 {
     font-size: 1.1rem;
     font-weight: 400;
@@ -291,8 +319,8 @@ button:hover {
   .budget-card button:first-child {
     color: dodgerblue;
     background-color: white;
-    font-size: 0.8rem;
-    padding: 0.4rem 0.4rem;
+    font-size: 0.6rem;
+    padding: 0.3rem;
     margin-right: 0.5rem;
     border-radius: 0.2rem;
     border: 1px solid dodgerblue;
@@ -301,8 +329,8 @@ button:hover {
   .budget-card button {
     color: grey;
     background-color: white;
-    font-size: 0.8rem;
-    padding: 0.4rem 0.4rem;
+    font-size: 0.6rem;
+    padding: 0.3rem;
     border-radius: 0.2rem;
     border: 1px solid grey;
   }
@@ -313,9 +341,6 @@ button:hover {
     padding: 20px;
     border-radius: 5px;
     color: black;
-  }
-
-  .modal form {
   }
 
   .modal-header {
