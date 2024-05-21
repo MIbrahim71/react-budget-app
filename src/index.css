@@ -2,6 +2,8 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   color-scheme: light dark;
   background-color: white;
+  margin: 0;
+  padding: 0;
 }
 
 .header {
@@ -37,7 +39,8 @@
   border: 1px solid dodgerblue;
 }
 
-button:hover {
+.header-btns button:hover,
+.budget-card button:hover {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 2px 5px;
   cursor: pointer;
 }
@@ -163,8 +166,8 @@ button:hover {
 }
 
 .close-button {
-  font-size: 2rem;
-  color: red;
+  font-size: 1.5rem;
+  color: rgb(187, 187, 187);
   background-color: white;
   border: none;
   border-radius: 0.2rem;
@@ -224,10 +227,12 @@ button:hover {
 .view-expense--header {
   display: flex;
   justify-content: space-between;
+  margin-top: 1rem;
 }
 
 .view-expense--header h1 {
   font-size: 1.5rem;
+  font-weight: 300;
 }
 
 .view-expense--delete {
@@ -238,17 +243,11 @@ button:hover {
   padding: 0rem 1rem;
   margin-right: 1rem;
   border: 1px solid red;
-}
-
-.view-expense {
-  display: flex;
-  justify-content: space-between;
-  border: 1px solid lightgray;
-  border-radius: 0.4rem;
+  cursor: pointer;
 }
 
 .view-expense h1 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 300;
   margin-left: 1rem;
 }
@@ -257,13 +256,22 @@ button:hover {
   display: flex;
 }
 
+.view-expense {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid lightgray;
+  border-radius: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+
 .view-expense--close {
   background-color: white;
   color: red;
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 0px 10px;
   border: none;
   margin-left: 1rem;
+  cursor: pointer;
 }
 
 .nobudget-msg {
@@ -283,7 +291,7 @@ button:hover {
 @media only screen and (max-width: 736px) {
   .header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     margin: 2rem 2rem;
   }
 
@@ -347,16 +355,17 @@ button:hover {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    padding: 0 1rem;
   }
 
   .modal-header h1 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-weight: 300;
     color: black;
   }
 
   .close-button {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     cursor: pointer;
   }
 
@@ -397,14 +406,36 @@ button:hover {
     padding: 8px 10px;
   }
 
+  .view-expense--container {
+    padding: 0 1rem;
+  }
+
+  .view-expense--header {
+    margin-bottom: 0.8rem;
+  }
+
+  .view-expense--header h1 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  .view-expense--delete {
+    font-size: 0.8rem;
+    padding: 0 0.8rem;
+    margin: 0;
+  }
+
   .view-expense {
     display: flex;
     justify-content: space-between;
     border: 1px solid lightgray;
+    border-radius: 0.2rem;
+    margin-bottom: 0.5rem;
   }
 
   .view-expense h1 {
-    font-size: 1.4rem;
+    font-size: 0.8rem;
     font-weight: 300;
   }
 
